@@ -62,10 +62,6 @@ namespace NameSorter
     {
         static void Main(string[] args)
         {
-            ListKlass listKlass = new ListKlass();
-            listKlass.SearchName("bÖrjE");
-            listKlass.PrintNames();
-
         }
 
     }
