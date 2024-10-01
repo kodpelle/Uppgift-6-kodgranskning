@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace NameSorter
 {
+    public class ListKlass
+    {
+        List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
+    }
      class Program
     {
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
+            
             Console.WriteLine("Original list");
             foreach (var name in names)
             {
