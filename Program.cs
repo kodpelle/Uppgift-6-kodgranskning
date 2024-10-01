@@ -9,17 +9,21 @@ namespace NameSorter
     public class Listklass
     {
         public List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
+
+        public void PrintName()
+        {
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+        }
     }
      class Program
     {
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Original list");
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
+            
 
             names.Sort();
             Console.WriteLine("\nSorted list:");
@@ -37,7 +41,9 @@ namespace NameSorter
             {
                 Console.WriteLine($"{searchName} is not in the list. ");
             }
+            
             Console.ReadKey();
+            
         }
         
     }
