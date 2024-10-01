@@ -19,8 +19,15 @@ namespace NameSorter
         }
         public void SortedNames()
         {
+            Console.WriteLine("Alfabetiskt sorterad lista:");
             names.Sort();
             PrintNames();
+        }
+        public void AddToList()
+        {
+            Console.WriteLine("skriv vilket namn du vill lägga till");
+            string addname = Console.ReadLine().ToLower();
+            names.Add(addname);
         }
     }
      class Program
@@ -30,12 +37,6 @@ namespace NameSorter
             
 
 
-            names.Sort();
-            Console.WriteLine("\nSorted list:");
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
             Console.WriteLine("\nEnter name to search:");
             string searchName = Console.ReadLine();
             if (names.Contains(searchName))
