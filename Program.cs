@@ -9,6 +9,14 @@ namespace NameSorter
     public class ListKlass
     {
         List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
+
+        public void PrintName()
+        {
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+        }
     }
      class Program
     {
@@ -16,10 +24,7 @@ namespace NameSorter
         {
             
             Console.WriteLine("Original list");
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
+
 
             names.Sort();
             Console.WriteLine("\nSorted list:");
