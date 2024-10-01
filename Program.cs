@@ -14,7 +14,7 @@ namespace NameSorter
         public string CapitalizeFirstLetter(string input)
         {
             if (string.IsNullOrEmpty(input))
-            return input; // Om strängen är tom eller null, returnera den som den är.
+                return input; // Om strängen är tom eller null, returnera den som den är.
 
             return char.ToUpper(input[0]) + input.Substring(1).ToLower();
         }
@@ -38,29 +38,35 @@ namespace NameSorter
         {
             Console.WriteLine("skriv vilket namn du vill lägga till");
             string addname = Console.ReadLine();
+            //använder min andra metod för att se till att första bokstaven blir stor och resten små.
             string formattedName = CapitalizeFirstLetter(addname);
             names.Add(formattedName);
         }
         //Metod för att söka i listan
         public void SearchName(string FindName)
         {
-            if (names.Contains(FindName))
+            //återanvänder metoden så att namn som läggs till också bara har stor första bokstav
+            string formattedName = CapitalizeFirstLetter(FindName);
+            if (names.Contains(formattedName))
             {
-                Console.WriteLine($"{FindName} Finns i listan.");
+                Console.WriteLine($"{formattedName} Finns i listan.");
             }
             else
             {
-                Console.WriteLine($"{FindName} Finns inte i listan.");
+                Console.WriteLine($"{formattedName} Finns inte i listan.");
             }
-            
+
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            ListKlass listKlass = new ListKlass();
+            listKlass.SearchName("bÖrjE");
+            listKlass.PrintNames();
 
         }
-        
+
     }
 }
