@@ -38,7 +38,8 @@ namespace NameSorter
         {
             Console.WriteLine("skriv vilket namn du vill lägga till");
             string addname = Console.ReadLine();
-            names.Add(addname);
+            string formattedName = CapitalizeFirstLetter(addname);
+            names.Add(formattedName);
         }
         //Metod för att söka i listan
         public void SearchName(string FindName)
