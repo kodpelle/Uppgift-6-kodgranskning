@@ -4,47 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter
+
+class Program
 {
-    public class Listklass
+    static void Main(string[] args)
     {
-        public List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
-
-        public void PrintName()
-        {
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
-        }
     }
-     class Program
-    {
-        static void Main(string[] args)
-        {
 
-            
-
-            names.Sort();
-            Console.WriteLine("\nSorted list:");
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
-            Console.WriteLine("\nEnter name to search:");
-            string searchName = Console.ReadLine();
-            if (names.Contains(searchName))
-            {
-                Console.WriteLine($"{searchName} is in the list.");
-            }
-            else
-            {
-                Console.WriteLine($"{searchName} is not in the list. ");
-            }
-            
-            Console.ReadKey();
-            
-        }
-        
-    }
 }
+
