@@ -10,12 +10,17 @@ namespace NameSorter
     {
         List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
 
-        public void PrintName()
+        public void PrintNames()
         {
             foreach (var name in names)
             {
                 Console.WriteLine(name);
             }
+        }
+        public void SortedNames()
+        {
+            names.Sort();
+            PrintNames();
         }
     }
      class Program
@@ -23,7 +28,6 @@ namespace NameSorter
         static void Main(string[] args)
         {
             
-            Console.WriteLine("Original list");
 
 
             names.Sort();
