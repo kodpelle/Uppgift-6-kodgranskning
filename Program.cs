@@ -10,7 +10,14 @@ namespace NameSorter
     {
         //Jag behåller datastrukturen lista eftersom vi bara hanterar strings med namn, det är enklast och mest effektivt när det är en liten simpel lista.
         List<string> names = new List<string> { "Anna", "John", "Alice", "Börje" };
+        //metod för att se till så att strings har stor första bokstav och resten små. 
+        public string CapitalizeFirstLetter(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            return input; // Om strängen är tom eller null, returnera den som den är.
 
+            return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+        }
         //ett förbättrat sätt att skriva ut innehållet i listan, går att återanvända
         public void PrintNames()
         {
@@ -30,7 +37,7 @@ namespace NameSorter
         public void AddToList()
         {
             Console.WriteLine("skriv vilket namn du vill lägga till");
-            string addname = Console.ReadLine().ToLower();
+            string addname = Console.ReadLine();
             names.Add(addname);
         }
         //Metod för att söka i listan
@@ -47,23 +54,11 @@ namespace NameSorter
             
         }
     }
-     class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            /*
 
-            Console.WriteLine("\nEnter name to search:");
-            string searchName = Console.ReadLine();
-            if (names.Contains(searchName))
-            {
-                Console.WriteLine($"{searchName} is in the list.");
-            }
-            else
-            {
-                Console.WriteLine($"{searchName} is not in the list. ");
-            }*/
-            Console.ReadKey();
         }
         
     }
